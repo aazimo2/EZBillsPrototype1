@@ -13,26 +13,61 @@ Chris Rattanasamay
 
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="layout.css">
 <title>Select Language</title>
 
-<!-- Navigation Test -->
-<!-- Reference for page navigation: https://www.w3.org/wiki/Creating_multiple_pages_with_navigation_menus -->
-<nav>
-    <ul>
-        <li>
-            <a style="font-size: 50px;" href="login.html"> English </a>
-        </li>
-        <li>
-            <a style="font-size: 50px;" href="login.html"> Spanish </a>
-        </li>
-        <li>
-            <a style="font-size: 50px;" href="login.html"> Thai    </a>
-        </li>
-        <li>
-            <a style="font-size: 50px;" href="login.html"> Russian </a>
-        </li>
-    </ul>
-</nav>
+<!-- Testing Code Stuff
+
+    <input id="newGame" class="btn" type="button" value="English" style="background-color: lightskyblue;">
+
+-->
+<img id="world" src="images/world.png">
+
+<ul id="languageSelect">
+
+    <!-- English -->
+    <li style="list-style-type:none;">
+        <a href="login.html"> 
+            <img src="images/englishFlag.png">
+
+            <button style="font-size: 50px;">
+                English
+            </button>
+        </a>
+    </li>
 
 
+    <!-- Spanish -->
+    <li style="list-style-type:none;">
+        <a href="login.html"> 
+            <img src="images/spanishFlag.png">
+            <button style="font-size: 50px;">
+                Español
+            </button>
+        </a>
+    </li>
+
+
+    <!-- Thai -->
+    <li style="list-style-type:none;">
+        <a href="login.html"> 
+            <img src="images/thaiFlag.png">
+            <button style="font-size: 50px;">
+                ไทย
+            </button>
+        </a>
+    </li>
+
+
+    <!-- Russian -->
+    <li style="list-style-type:none;">
+        <a href="login.html"> 
+            <img src="images/russianFlag.png">
+            <button style="font-size: 50px;">
+                Pусский
+            </button>
+        </a>
+    </li>
+
+</ul>
 </html>

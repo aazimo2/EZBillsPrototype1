@@ -1,1 +1,45 @@
-pp
+<!DOCTYPE html>
+<html>
+<link rel= "stylesheet" href= "layout.css">
+<link rel= "stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+<title>Add Bill</title>
+
+<h1 style="text-align: center; font-size: 40px;"> 
+    <u> 
+        Billing Information
+    </u> 
+</h1>
+
+<form id= "billInfo" style="text-align: center">
+
+    <label>Service Provider Name:</label>
+    <input type="text" id="serviceProvider"> <br> <br>
+
+    <label style="padding-left: 62px;">Account Number:</label>
+    <input type="text" id="accountNumber"> <br> <br>
+
+    <label style="padding-left: 26px;">Day Of The Payment:</label>
+    <input type="text" id="dayToPay" > <br> <br>
+
+    <div style="padding-bottom: 20px; padding-right: 40px;">
+        <label>Payment Method:</label> 
+        <input class="btn" type="button" value="+ Add New Card"> 
+    </div>
+
+    <ul id="listOfCreditCards">
+        <div> <input class="btn" type="button" value="Visa Debit Card Ending in ****1234"><br> </div>
+    </ul>
+
+
+    <a href="bills.html" style="padding-right: 200px;" > 
+        <input class="btn" type="button" style="background-color: gray;" value="Cancel">
+    </a>
+
+    <a href="bills.html" style="padding-left: 200px;"> 
+        <input class="btn" type="button" style="background-color: aquamarine;" value="Register">
+    </a>
+
+</form> 
+
+
+</html>
