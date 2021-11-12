@@ -1,1 +1,68 @@
-pp
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bills & Payments</title>
+
+<!-- Load style sheet -->
+<link rel="stylesheet" href="stylesheets/bills.css">
+
+</head>
+
+<body>
+
+    <header id="backAccountLanguage">
+
+        <!-- Back button -->
+        <div id="backBox">
+            <a href="dashboard.html">
+                <button id="backButton" class="imageButton"></button>
+            </a>
+            <label for="backButton" class="headerLabel" id="backLabel">Back</label>
+        </div>
+
+        <!-- Account Button -->
+        <div id="accountBox">
+            <button id="accountButton" class="imageButton"></button>
+            <label for="accountButton" class="headerLabel" id="accountLabel">Account</label>
+        </div>
+
+        <!-- Language Selection -->
+        <a href="index.html">
+            <button id="languageButton"><img id="flag" src="images/englishFlag.png"> English</button>
+        </a>
+    </header>
+
+    <h1>Bills & Payments</h1>
+
+    <div id="bills">
+        
+        <div id="column1">
+            <div id="utilitiesBox">
+                <a href="utilities.html">
+                    <button id="utilitiesButton" class="imageButton"></button>
+                </a>
+                <label for="utilitiesButton" id="utilitiesLabel">Utilities</label>
+            </div>
+            <br>
+            <div>
+                <button id="medicalButton" class="imageButton"></button>
+                <label for="medicalButton" id="medicalLabel">Medical</label>
+            </div>
+        </div>
+
+        <div id="column2" class="billColumns">
+            <div id="entertainmentBox">
+                <button id="entertainmentButton" class="imageButton"></button>
+                <label for="entertainmentButton" id="entertainmentLabel">Entertainment</label>
+            </div>
+            <br>
+            <div>
+                <button id="allBillsButton" class="imageButton"></button>
+                <label for="allBillsButton" id="allBillsLabel">All Bills</label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
