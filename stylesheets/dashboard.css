@@ -26,6 +26,8 @@ td img{
     border:solid black 1px;
     border-radius:6px;
     -moz-border-radius:6px;
+    margin-left: 100px;
+    margin-right: 100px
 }
 
 .icon-box img{
