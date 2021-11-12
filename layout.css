@@ -1,0 +1,130 @@
+body {
+    font-family: 'Comfortaa';
+}
+
+img {
+    display: inline-block;
+    height: 20px;
+}
+
+header {
+    font-size: 64px;
+    color: #85c5aa;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+
+main {
+    margin: auto;
+    text-align: center;
+    alignment: center;
+}
+
+.column {
+    display: inline-block;
+}
+
+p {
+    padding: 10px;
+    font-size: 27px;
+    vertical-align: middle;
+    border-radius: 12px;
+}
+
+input[type=text] {
+    font-family: 'Comfortaa';
+    margin: 20px;
+    font-size: 28px;
+    vertical-align: middle;
+    border-radius: 12px;
+}
+
+button {
+    font-family: 'Comfortaa';
+    padding: 10px;
+    margin: 20px;
+    font-size: 28px;
+    color: white;
+    background: #85c5aa;
+    border-radius: 12px;
+}
+
+#langSelect {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    padding-top: 30px;
+    padding-right: 50px;
+}
+
+
+/* language.html */
+#world { /* Picture of Globe */
+    margin: auto;
+    display: table;
+    height: 100px;
+}
+#languageSelect {
+    margin: auto;
+    display: table;
+}
+#languageSelect li {
+    padding-bottom: 10px;
+}
+#languageSelect img {
+    float: left;
+    height: 60px;
+    border: 2px solid black;
+}
+
+
+/* addBill.html */
+#billInfo label {
+    font-size: 25px;
+}
+#billInfo input {
+    font-size: 25px;
+}
+#listOfCreditCards {
+    padding-bottom: 40px;
+}
+#listOfCreditCards div {
+    padding-bottom: 5px;
+}
+
+
+/* confirmPayment.html */
+#confirmButtons {
+    text-align: center;
+}
+#confirmButtons input {
+    font-size: 25px;
+}
+
+/*Font Awesome Styling Start*/
+.fa-user{
+    display: inline-block;
+    vertical-align: middle;
+    font-size:66px;
+    color: #a0caff;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+}
+
+.fa-user-plus {
+    display: inline-block;
+    vertical-align: middle;
+    font-size:66px;
+    color: #a0caff;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+}
+
+.fa-key {
+    display: inline-block;
+    vertical-align: middle;
+    font-size:48px;
+    color: #efbe75;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+}
+
+/*Font Awesome Styling End*/
