@@ -1,0 +1,77 @@
+body {
+    font-family: 'Comfortaa';
+}
+
+img {
+    display: inline-block;
+    height: 20px;
+}
+
+header {
+    font-size: 64px;
+    color: #85c5aa;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+
+main{
+    margin: auto;
+    text-align: center;
+    alignment: center;
+}
+
+.column {
+    display: inline-block;
+}
+
+p {
+    padding: 10px;
+    font-size: 27px;
+    vertical-align: middle;
+    border-radius: 12px;
+}
+
+input[type=text] {
+    font-family: 'Comfortaa';
+    margin: 20px;
+    font-size: 28px;
+    vertical-align: middle;
+    border-radius: 12px;
+}
+
+button {
+    font-family: 'Comfortaa';
+    padding: 10px;
+    margin: 20px;
+    font-size: 28px;
+    color: white;
+    background: #85c5aa;
+    border-radius: 12px;
+}
+
+button:active{
+    background: #486457;
+}
+
+#langSelect {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    padding-top: 30px;
+    padding-right: 50px;
+}
+
+#createAccButton {
+    position: fixed;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%, -50%);
+}
+
+#cancelButton {
+    position: fixed;
+    left: 6%;
+    bottom: 5px;
+    transform: translate(-50%, -50%);
+}
