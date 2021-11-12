@@ -47,3 +47,13 @@
 #confirmButtons input {
     font-size: 25px;
 }
+
+button {
+    font-family: 'Comfortaa';
+    padding: 10px;
+    margin: 20px;
+    font-size: 28px;
+    color: white;
+    background: #85c5aa;
+    border-radius: 12px;
+}
