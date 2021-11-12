@@ -1,0 +1,63 @@
+/* header */
+#backAccountLanguage {
+    text-align: center;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: -5%;
+    padding-bottom: 5%;
+}
+
+#backBox, #accountBox {
+    float: left;
+    margin: auto;
+}
+
+#accountBox {
+    padding-left: 2.5%;
+}
+
+.imageButton {
+    cursor:pointer;
+    background-color: transparent;
+    border: none;
+}
+
+#backAccountLanguage .imageButton {
+    background-size: 80px 80px;
+    height: 80px;
+    width: 80px;
+}
+
+#backButton {
+    background-image: url("../images/backArrow.png");
+}
+
+#accountButton {
+    background-image: url("../images/account.png");
+}
+
+#languageButton {
+    float: right;
+    font-size: 28px;
+    margin: auto;
+    vertical-align: middle;
+}
+
+label {
+    font-weight: bold;
+}
+
+.headerLabel {
+    display: block;
+}
+
+#flag {
+    display: inline-block;
+    height: 20px;
+}

@@ -1,0 +1,29 @@
+/* utilities.html */
+#utilitiesDiv {
+    margin: 0 auto;
+    border-top: 3px solid black;
+    overflow-y: scroll;
+}
+
+table {
+    font-size: 38px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 2px solid black;
+    overflow-y: scroll;
+}
+
+tr {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+td {
+    display: block;
+}
+
+p {
+    height: auto;
+    font-size: 28px;
+}
