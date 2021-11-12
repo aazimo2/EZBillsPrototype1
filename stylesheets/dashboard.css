@@ -13,7 +13,24 @@ table {
 caption{
     padding: 30px;
 }
-img{
+td img{
     margin: 0 auto;
 
+}
+
+.icon-box{
+    display: inline-block;
+    width:300px;
+    height:300px;
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+    margin-left: 100px;
+    margin-right: 100px
+}
+
+.icon-box img{
+    width:200px;
+    height:200px;
 }
