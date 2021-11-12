@@ -1,1 +1,230 @@
-pp
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+    <meta charset="UTF-8">
+    <link href="stylesheets/history.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+
+</head>
+<body onload="createTable()">
+    <div class="container">
+        <h1>Spending History</h1>
+    </div>
+    <div class="container">
+        <canvas id="myChart" width="100px" height="100px"></canvas>
+    </div>
+    <div class="container">
+        <p><button onclick="sortTableName()">Sort By Bill</button></p>
+        <p><button onclick="sortTableAmount()">Sort By Amount</button></p>
+        <p><button onclick="sortTableDate()">Sort By Date</button></p>
+      </div>
+    <div class="container">
+        <table id="table">
+            <tr>
+              <th>Bill</th>
+              <th>Date</th>
+              <th>Amount</th>
+            </tr>
+            <tr>
+              <td><img src="images/water.png" style="object-fit:contain;
+                width:20px;
+                height:20px;
+                float: left;">Home Aqua</td>
+              <td>10/14/2021</td>
+              <td>$40.35</td>
+            </tr>
+            <tr>
+              <td><img src="images/car_icon.jpg" style="object-fit:contain;
+                width:20px;
+                height:20px;
+                float: left;">Bissan Tax</td>
+              <td>10/12/2021</td>
+              <td>$74.30</td>
+            </tr>
+            <tr>
+              <td><img src="images/eletric.JPG" style="object-fit:contain;
+                width:20px;
+                height:20px;
+                float: left;">BomEd</td>
+              <td>10/10/2021</td>
+              <td>$125.56</td>
+            </tr>
+            <tr>
+              <td><img id="world" src="images/house.png"
+                style="object-fit:contain;
+                width:20px;
+                height:20px;
+                float: left;">AirCon</td>
+              <td>10/10/2021</td>
+              <td>$82.45</td>
+            </tr>
+            <tr>
+                <td><img id="world" src="images/car_icon.jpg"
+                    style="object-fit:contain;
+                width:20px;
+                height:20px;
+                float: left;">Wesla Tax</td>
+                <td>10/07/2021</td>
+                <td>$70.45</td>
+              </tr>
+          </table>
+          
+      
+
+
+    </div>
+
+
+</body>
+
+<script type="text/javascript">
+              
+
+    function sortTableName(){
+        var table = document.getElementById("table");
+        var rows = table.rows;
+        var swap = true;
+        while(swap){
+            swap = false;
+            for(i = 1; i<(rows.length -1);i++){
+                var shouldSwitch = false;
+                var row1 = rows[i].getElementsByTagName("TD")[0].innerText;
+                var row2 = rows[i+1].getElementsByTagName("TD")[0].innerText;
+                if(row1.toLowerCase() > row2.toLowerCase()){
+                    //console.log("HELLO")
+                    shouldSwitch = true;
+                    break;
+                }
+
+            }
+            if(shouldSwitch){
+                rows[i].parentNode.insertBefore(rows[i+1],rows[i])
+                swap = true;
+            }
+        }
+       
+        
+
+    }
+
+    function sortTableAmount(){
+        var table = document.getElementById("table");
+        var rows = table.rows;
+        var swap = true;
+        while(swap){
+            swap = false;
+            for(i = 1; i<(rows.length -1);i++){
+                var shouldSwitch = false;
+                var row1 = rows[i].getElementsByTagName("TD")[2].innerHTML;
+                var row2 = rows[i+1].getElementsByTagName("TD")[2].innerHTML;
+                var new1 = row1.substring(1)
+                var new2 = row2.substring(1)
+                if(parseInt(new1)<parseInt(new2)){
+                    //console.log("HELLO")
+                    shouldSwitch = true;
+                    break;
+                }
+
+            }
+            if(shouldSwitch){
+                rows[i].parentNode.insertBefore(rows[i+1],rows[i])
+                swap = true;
+            }
+        }
+    }
+
+    function sortTableDate(){
+        var table = document.getElementById("table");
+        var rows = table.rows;
+        var swap = true;
+        while(swap){
+            swap = false;
+            for(i = 1; i<(rows.length -1);i++){
+                var shouldSwitch = false;
+                var row1 = rows[i].getElementsByTagName("TD")[1].innerHTML;
+                var row2 = rows[i+1].getElementsByTagName("TD")[1].innerHTML;
+                var date1 = new Date(row1)
+                var date2 = new Date(row2)
+                if(date1<date2){
+                    //console.log("HELLO")
+                    shouldSwitch = true;
+                    break;
+                }
+
+            }
+            if(shouldSwitch){
+                rows[i].parentNode.insertBefore(rows[i+1],rows[i])
+                swap = true;
+            }
+        }
+
+    }
+
+    function createTable(){
+        var labels= []
+        var data = []
+        var table = document.getElementById("table");
+        var rows = table.rows;
+        var new1 = rows[1].getElementsByTagName("TD")[0].innerText
+        console.log(rows.length)
+        for(i=1;i<(rows.length);i++){
+            var label = rows[i].getElementsByTagName("TD")[0].innerText;
+            var row1 = rows[i].getElementsByTagName("TD")[2].innerHTML;
+            var new1 = row1.substring(1)
+
+
+            labels.push(label)
+            data.push(parseInt(new1))
+        }
+        console.log(labels,data)
+        const ctx = document.getElementById('myChart').getContext('2d');
+		const myChart = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: labels,
+				datasets: [{
+					label: 'Amount Spent',
+					data: data,
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)',
+						'rgba(255, 159, 64, 0.2)'
+					],
+					borderColor: [
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)'
+					],
+					borderWidth: 1
+				}]
+			},
+			options: {
+                
+				scales: {
+					y: {
+						beginAtZero: false
+					}
+				}
+			}
+		});
+        ctx.canvas.parentNode.style.height = '400px';
+        ctx.canvas.parentNode.style.width = '400px';
+        
+    }
+
+</script>
+
+
+
+
+</html>

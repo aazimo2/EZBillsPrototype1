@@ -1,0 +1,19 @@
+
+.container{
+    text-align: center;
+}
+table {
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+    width: 500px;
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+}
+caption{
+    padding: 30px;
+}
+img{
+    margin: 0 auto;
+
+}
