@@ -1,0 +1,111 @@
+body {
+    font-family: 'Comfortaa';
+}
+
+img {
+    display: inline-block;
+    height: 20px;
+}
+
+header {
+    font-size: 64px;
+    color: #85c5aa;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+
+.centered {
+    margin: auto;
+    text-align: center;
+    alignment: center;
+}
+
+/*Font Awesome Styling Start*/
+.fa-user{
+    display: inline-block;
+    vertical-align: middle;
+    font-size:66px;
+    color: #a0caff;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+}
+
+.fa-user-plus {
+    display: inline-block;
+    vertical-align: middle;
+    font-size:66px;
+    color: #a0caff;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+}
+
+.fa-key{
+    display: inline-block;
+    vertical-align: middle;
+    font-size:48px;
+    color: #efbe75;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+}
+
+/*Font Awesome Styling End*/
+
+input[type=text] {
+    font-family: 'Comfortaa';
+    margin: 20px;
+    font-size: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 12px;
+}
+
+::placeholder{
+    font-family: 'Comfortaa';
+    font-style: italic;
+    color: #c5cbd7;
+}
+
+button {
+    font-family: 'Comfortaa';
+    padding: 10px;
+    margin: 20px;
+    font-size: 28px;
+    color: white;
+    background: #85c5aa;
+    border-radius: 12px;
+}
+
+button:active{
+    background: #486457;
+}
+
+#helpButton {
+    font-size: 35px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+#newAccButton  {
+    padding: 10px;
+    font-weight: bolder;
+}
+
+#langSelect {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    padding-top: 30px;
+    padding-right: 50px;
+}
+
+#newAccount {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    padding: 50px;
+}
+
+#help {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    padding: 50px;
+}
