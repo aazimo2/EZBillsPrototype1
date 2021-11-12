@@ -1,12 +1,17 @@
 
 /* index.html */
 
+.btn, p, form, body, button, h1, u, li {
+    font-family: 'Comfortaa';
+}
+
 #world { /* Picture of Globe */
     margin: auto;
     display: table;
     height: 100px;
 }
 #languageSelect {
+    font-family: 'Comfortaa';
     margin: auto;
     display: table;
 }
