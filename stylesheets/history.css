@@ -8,8 +8,13 @@
 }
 table {
     margin: 0 auto; /* or margin: 0 auto 0 auto */
+    width: 500px;
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
   }
-  image{
+image{
     object-fit:contain;
     width:10px;
     height:10px;
