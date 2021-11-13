@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/layout.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/header.css">
 </head>
 
 
@@ -12,12 +13,26 @@
 <html>
 <title>Add Bill</title>
 
-<header>
-    <div id="langSelect">
-        <a href="index.html">
-            <button style="font-family: 'Comfortaa';"><img src="images/englishFlag.png"> English</button>
+<header id="backAccountLanguage">
+
+    <!-- Back button -->
+    <div id="backBox">
+        <a href="utilties.html">
+            <button id="backButton" class="imageButton"></button>
         </a>
+        <label for="backButton" class="headerLabel" id="backLabel">Back</label>
     </div>
+
+    <!-- Account Button -->
+    <div id="accountBox">
+        <button id="accountButton" class="imageButton"></button>
+        <label for="accountButton" class="headerLabel" id="accountLabel">Account</label>
+    </div>
+
+    <!-- Language Selection -->
+    <a href="index.html">
+        <button id="languageButton" style="font-family: 'Comfortaa';"><img id="flag" src="images/englishFlag.png"> English</button>
+    </a>
 </header>
 
 
@@ -52,13 +67,13 @@
 
 <footer id="addBillConfirmButtons">
     <div id="addBillCancel">
-        <a href="bills.html" style="float:left; font-family: 'Comfortaa';" > 
-            <button style="background-color: gray;">Cancel</button>
+        <a href="utilities.html" style="float:left;"> 
+            <button style="background-color: gray; font-family: 'Comfortaa';">Cancel</button>
         </a>
     </div>
     <div id="addBillConfirm">
-        <a href="bills.html" style="float:right; font-family: 'Comfortaa';"> 
-            <button> Confirm </button>
+        <a href="utilities.html" style="float:right;"> 
+            <button style="font-family: 'Comfortaa';"> Confirm </button>
         </a>
     </div>
 </footer>
