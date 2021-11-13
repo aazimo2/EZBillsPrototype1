@@ -4,17 +4,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/layout.css">
-    <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
 </head>
 
-<body>
 
+<body>
+<html>
 <title>Confirm Payment</title>
 
 <header>
     <div id="langSelect">
         <a href="index.html">
-            <button><img src="images/englishFlag.png"> English</button>
+            <button style="font-family: 'Comfortaa';"><img src="images/englishFlag.png"> English</button>
         </a>
     </div>
 </header>
@@ -33,13 +34,16 @@
 
 <footer>
     <div id="confirmButtons">
-        <a href="bills.html" style="padding-right: 200px;" > 
-            <input class="btn" type="button" style="background-color: gray;" value="Cancel">
-        </a>
-
-        <a href="bills.html" style="padding-left: 200px;"> 
-            <input class="btn" type="button" style="background-color: aquamarine;" value="Confirm">
-        </a>
+        <div id="confirmPaymentsCancel">
+            <a href="bills.html" style="float: left;" > 
+                <button style="background-color: gray;">Cancel</button>
+            </a>
+        </div>
+        <div id="confirmPaymentsConfirm">
+            <a href="bills.html" style="float: right; "> 
+                <button>Confirm</button>
+            </a>
+        </div>
     </div>
 </footer>
 

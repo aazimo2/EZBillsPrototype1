@@ -1,4 +1,4 @@
-body {
+.btn, p, form, body, button, h1, u, li {
     font-family: 'Comfortaa';
 }
 
@@ -8,28 +8,25 @@ img {
 }
 
 header {
-    font-size: 64px;
+    font-family: 'Comfortaa';
+    font-size: 25px;
     color: #85c5aa;
     text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
     padding-top: 120px;
     padding-bottom: 20px;
 }
 
-main {
-    margin: auto;
-    text-align: center;
-    alignment: center;
-}
-
-.column {
-    display: inline-block;
-}
-
-p {
+button {
+    font-family: 'Comfortaa';
     padding: 10px;
-    font-size: 27px;
-    vertical-align: middle;
+    font-size: 28px;
+    color: white;
+    background: #85c5aa;
     border-radius: 12px;
+}
+
+button:active{
+    background: #486457;
 }
 
 input[type=text] {
@@ -40,17 +37,9 @@ input[type=text] {
     border-radius: 12px;
 }
 
-button {
-    font-family: 'Comfortaa';
-    padding: 10px;
-    margin: 20px;
-    font-size: 28px;
-    color: white;
-    background: #85c5aa;
-    border-radius: 12px;
-}
 
 #langSelect {
+    font-family: 'Comfortaa';
     position: fixed;
     top: 0px;
     right: 0;
@@ -59,22 +48,23 @@ button {
 }
 
 
-/* language.html */
+/* index.html */
 #world { /* Picture of Globe */
     margin: auto;
     display: table;
     height: 100px;
 }
 #languageSelect {
+    font-family: 'Comfortaa';
     margin: auto;
     display: table;
 }
 #languageSelect li {
-    padding-bottom: 10px;
+    padding-bottom: 40px;
 }
 #languageSelect img {
     float: left;
-    height: 60px;
+    height: 75px;
     border: 2px solid black;
 }
 
@@ -83,7 +73,8 @@ button {
 #billInfo label {
     font-size: 25px;
 }
-#billInfo input {
+#billInfo button {
+    background: darkblue;
     font-size: 25px;
 }
 #listOfCreditCards {
@@ -92,39 +83,30 @@ button {
 #listOfCreditCards div {
     padding-bottom: 5px;
 }
+#addBillConfirmButtons {
+    text-align: center;
+    font-size: 25px;
+}
+#addBillCancel {
+    padding-left: 400px;
+}
+#addBillConfirm {
+    padding-right: 400px;
+}
 
 
 /* confirmPayment.html */
 #confirmButtons {
+    font-family: 'Comfortaa';
     text-align: center;
 }
-#confirmButtons input {
+#confirmButtons button {
+    font-family: 'Comfortaa';
     font-size: 25px;
 }
-
-/*Font Awesome Styling Start*/
-.fa-user{
-    display: inline-block;
-    vertical-align: middle;
-    font-size:66px;
-    color: #a0caff;
-    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+#confirmPaymentsCancel {
+    padding-left: 400px;
 }
-
-.fa-user-plus {
-    display: inline-block;
-    vertical-align: middle;
-    font-size:66px;
-    color: #a0caff;
-    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+#confirmPaymentsConfirm {
+    padding-right: 400px;
 }
-
-.fa-key {
-    display: inline-block;
-    vertical-align: middle;
-    font-size:48px;
-    color: #efbe75;
-    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
-}
-
-/*Font Awesome Styling End*/
