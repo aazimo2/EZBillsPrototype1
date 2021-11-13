@@ -48,7 +48,34 @@ input[type=text] {
     padding-right: 50px;
 }
 
+/*Font Awesome Styling Start*/
+.fa-user{
+    display: inline-block;
+    vertical-align: middle;
+    font-size:66px;
+    color: #a0caff;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+}
 
+.fa-user-plus {
+    display: inline-block;
+    vertical-align: middle;
+    font-size:66px;
+    color: #a0caff;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+}
+
+.fa-key{
+    display: inline-block;
+    vertical-align: middle;
+    font-size:48px;
+    color: #efbe75;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+}
+
+/*Font Awesome Styling End*/
+
+ 
 /* index.html */
 #world { /* Picture of Globe */
     margin: auto;
@@ -88,6 +115,11 @@ input[type=text] {
     text-align: center;
     font-size: 25px;
 }
+#addBillConfirmButtons buttons {
+    font-family: 'Comfortaa';
+    text-align: center;
+    font-size: 25px;
+}
 #addBillCancel {
     padding-left: 400px;
 }
@@ -98,7 +130,6 @@ input[type=text] {
 
 /* confirmPayment.html */
 #confirmButtons {
-    font-family: 'Comfortaa';
     text-align: center;
 }
 #confirmButtons button {
