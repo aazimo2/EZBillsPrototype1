@@ -6,9 +6,9 @@
 
 <!-- Load style sheet -->
 <link rel="stylesheet" href="stylesheets/header.css">
-<link rel="stylesheet" href="stylesheets/bills.css">
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="stylesheets/layout.css">
+<link rel="stylesheet" href="stylesheets/bills.css">
 
 
 </head>
@@ -43,27 +43,33 @@
         
         <div id="column1">
             <div id="utilitiesBox">
-                <a href="utilities.html">
-                    <button id="utilitiesButton" class="imageButton"></button>
-                </a>
-                <label for="utilitiesButton" id="utilitiesLabel">Utilities</label>
+                <label for="utilitiesButton" id="utilitiesLabel">
+                    <button id="utilitiesButton" onClick="window.location.href='utilities.html'" class="imageButton">.</button>
+                    Utilities
+                </label>
             </div>
             <br>
             <div>
-                <button id="medicalButton" class="imageButton"></button>
-                <label for="medicalButton" id="medicalLabel">Medical</label>
+                <label for="medicalButton" id="medicalLabel">
+                    <button id="medicalButton" class="imageButton">.</button>
+                    Medical
+                </label>
             </div>
         </div>
 
         <div id="column2" class="billColumns">
             <div id="entertainmentBox">
-                <button id="entertainmentButton" class="imageButton"></button>
-                <label for="entertainmentButton" id="entertainmentLabel">Entertainment</label>
+                <label for="entertainmentButton" id="entertainmentLabel">
+                    <button id="entertainmentButton" class="imageButton">.</button>
+                    Entertainment
+                </label>
             </div>
             <br>
             <div>
-                <button id="allBillsButton" class="imageButton"></button>
-                <label for="allBillsButton" id="allBillsLabel">All Bills</label>
+                <label for="allBillsButton" id="allBillsLabel"> 
+                    <button id="allBillsButton" class="imageButton">.</button>
+                    All Bills
+                </label>
             </div>
         </div>
     </div>

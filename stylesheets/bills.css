@@ -14,6 +14,12 @@
     float: right;
 }
 
+label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
 #utilitiesBox, #entertainmentBox {
     padding-bottom: 30%;
 }
@@ -22,6 +28,7 @@
     background-size: 200px 200px;
     height: 200px;
     width: 200px;
+    font-size: 0;
 }
 
 #utilitiesButton {
