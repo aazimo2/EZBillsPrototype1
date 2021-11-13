@@ -1,10 +1,54 @@
-
-/* index.html */
-
 .btn, p, form, body, button, h1, u, li {
     font-family: 'Comfortaa';
 }
 
+img {
+    display: inline-block;
+    height: 20px;
+}
+
+header {
+    font-family: 'Comfortaa';
+    font-size: 25px;
+    color: #85c5aa;
+    text-shadow: -1px -1px 0 #2f425d, 1px -1px 0 #2F425DFF, -1px 1px 0 #2F425DFF, 1px 1px 0 #2F425DFF;
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+
+button {
+    font-family: 'Comfortaa';
+    padding: 10px;
+    font-size: 28px;
+    color: white;
+    background: #85c5aa;
+    border-radius: 12px;
+}
+
+button:active{
+    background: #486457;
+}
+
+input[type=text] {
+    font-family: 'Comfortaa';
+    margin: 20px;
+    font-size: 28px;
+    vertical-align: middle;
+    border-radius: 12px;
+}
+
+
+#langSelect {
+    font-family: 'Comfortaa';
+    position: fixed;
+    top: 0px;
+    right: 0;
+    padding-top: 30px;
+    padding-right: 50px;
+}
+
+
+/* index.html */
 #world { /* Picture of Globe */
     margin: auto;
     display: table;
@@ -16,11 +60,11 @@
     display: table;
 }
 #languageSelect li {
-    padding-bottom: 10px;
+    padding-bottom: 40px;
 }
 #languageSelect img {
     float: left;
-    height: 60px;
+    height: 75px;
     border: 2px solid black;
 }
 
@@ -29,7 +73,8 @@
 #billInfo label {
     font-size: 25px;
 }
-#billInfo input {
+#billInfo button {
+    background: darkblue;
     font-size: 25px;
 }
 #listOfCreditCards {
@@ -38,22 +83,30 @@
 #listOfCreditCards div {
     padding-bottom: 5px;
 }
+#addBillConfirmButtons {
+    text-align: center;
+    font-size: 25px;
+}
+#addBillCancel {
+    padding-left: 400px;
+}
+#addBillConfirm {
+    padding-right: 400px;
+}
 
 
 /* confirmPayment.html */
 #confirmButtons {
+    font-family: 'Comfortaa';
     text-align: center;
 }
-#confirmButtons input {
+#confirmButtons button {
+    font-family: 'Comfortaa';
     font-size: 25px;
 }
-
-button {
-    font-family: 'Comfortaa';
-    padding: 10px;
-    margin: 20px;
-    font-size: 28px;
-    color: white;
-    background: #85c5aa;
-    border-radius: 12px;
+#confirmPaymentsCancel {
+    padding-left: 400px;
+}
+#confirmPaymentsConfirm {
+    padding-right: 400px;
 }
