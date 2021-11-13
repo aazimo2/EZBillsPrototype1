@@ -7,11 +7,38 @@
     <link href="stylesheets/history.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/bAndUHeader.css">
+
 
 
 
 </head>
 <body onload="createTable()">
+    <div class="container" style="border-bottom:solid black 1px">
+        <header id="backAccountLanguage">
+
+            <!-- Back button -->
+            <div id="backBox">
+                <a href="dashboard.html">
+                    <button id="backButton" class="imageButton"></button>
+                </a>
+                <label for="backButton" class="headerLabel" id="backLabel">Back</label>
+            </div>
+    
+            <!-- Account Button -->
+            <div id="accountBox">
+                <button id="accountButton" class="imageButton"></button>
+                <label for="accountButton" class="headerLabel" id="accountLabel">Account</label>
+            </div>
+    
+            <!-- Language Selection -->
+            <a href="index.html">
+                <button id="languageButton"><img id="flag" src="images/englishFlag.png"> English</button>
+            </a>
+        </header>
+
+    </div>
+
     <div class="container">
         <h1>Spending History</h1>
     </div>

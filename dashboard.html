@@ -6,14 +6,31 @@
     <link rel="stylesheet" href="stylesheets/layout.css">
     <meta charset="UTF-8">
     <link href="stylesheets/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/bAndUHeader.css">
 
 
 
 </head>
 <body>
-    <div class="container">
-        <h1>Dashboard</h1>
+    <div class="container" style="border-bottom:solid black 1px">
+      <header id="backAccountLanguage">
+
+        <!-- Account Button -->
+        <div id="accountBox">
+            <button id="accountButton" class="imageButton"></button>
+            <label for="accountButton" class="headerLabel" id="accountLabel">Account</label>
+        </div>
+
+        <!-- Language Selection -->
+        <a href="index.html">
+            <button id="languageButton"><img id="flag" src="images/englishFlag.png"> English</button>
+        </a>
+    </header>
+    
     </div>
+    <div class="container">
+      <h1>Dashboard</h1>
+  </div>
    
    
     <div class="container">
