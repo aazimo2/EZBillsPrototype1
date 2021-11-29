@@ -30,20 +30,27 @@
     </div>
 
     <!-- Language Selection -->
-    <a href="index.html">
-        <button id="languageButton" style="font-family: 'Comfortaa';"><img id="flag" src="images/englishFlag.png"> English</button>
-    </a>
+    <button id="languageButton" style="font-family: 'Comfortaa'; "onclick="swapLang()"> 
+        <img id="flag" src="images/englishFlag.png" > 
+        <p id="language">English</p> 
+    </button>
+
 </header>
 
 
 <main>
     <h1 style="text-align: center; font-size: 40px;">
-        <u>Confirm Payment</u>
+        <u>
+            <p id="confirmTitle">Confirm Payment</p>
+        </u>
     </h1>
 
 
     <h2 style="font-size: 100px; text-align: center;">Aerizon</h2>
-    <p style="font-size: 50px; text-align: center;">Pay $79.00 for WiFi?</p>
+    <p style="font-size: 50px; text-align: center;" id="confirmPay">Pay $79.00 for WiFi?</p>
+    <p style="font-size: 50px; text-align: center;" id="confirmMethod">Visa Debit ending in ****1234</p>
+    <p style="font-size: 50px; text-align: center;" id="confirmDate"> Date to Pay: 12/01/2021</p>
+
 </main>
 
 
@@ -51,17 +58,53 @@
     <div id="confirmButtons">
         <div id="confirmPaymentsCancel">
             <a href="utilities.html" style="float: left;" > 
-                <button style="background-color: gray;">Cancel</button>
+                <button style="background-color: gray;" id="cancel">Cancel</button>
             </a>
         </div>
         <div id="confirmPaymentsConfirm">
             <a href="utilities.html" style="float: right; "> 
-                <button>Confirm</button>
+                <button id="confirm">Confirm</button>
             </a>
         </div>
     </div>
 </footer>
 
 </body>
+
+<script>
+    document.getElementById("confirmTitle").innerHTML = localStorage.getItem("confirmTitle");
+    document.getElementById("backLabel").innerHTML = localStorage.getItem("back");
+    document.getElementById("cancel").innerHTML = localStorage.getItem("cancel");
+    document.getElementById("confirm").innerHTML = localStorage.getItem("confirm");
+    document.getElementById("language").innerHTML = localStorage.getItem("select");
+    document.getElementById("confirmPay").innerHTML = localStorage.getItem("confirmPay");
+    document.getElementById("confirmMethod").innerHTML = localStorage.getItem("confirmMethod");
+    document.getElementById("confirmDate").innerHTML = localStorage.getItem("confirmDate");
+
+    
+    flag = localStorage.getItem("lang");
+    switch(flag) {
+        case "english":
+            document.getElementById("flag").src = "images/englishFlag.png";
+            break;
+        case "spanish":
+            document.getElementById("flag").src = "images/spanishFlag.png";
+            break;
+        case "thai":
+            document.getElementById("flag").src = "images/thaiFlag.png";
+            break;
+        case "russian":
+            document.getElementById("flag").src = "images/russianFlag.png";
+            break;
+        default:
+            document.getElementById("flag").src = "images/englishFlag.png";
+            break;
+    }
+
+    function swapLang() {
+        sessionStorage.setItem("prev", "confirmPayment.html")
+        window.location.href = "index.html";
+    }
+</script>
 
 </html>

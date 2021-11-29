@@ -22,52 +22,339 @@ Chris Rattanasamay
     <input id="newGame" class="btn" type="button" value="English" style="background-color: lightskyblue;">
 
 -->
+<script>
+    function previousPage() {
+        if (sessionStorage.getItem("prev") == null) {
+            window.location.href = "login.html";
+        } else {
+            window.location.href = sessionStorage.getItem("prev");
+        }
+    }
+
+    // English
+    function swapEnglish() {
+        // localStorage.setItem("", "");
+        localStorage.setItem("lang", "english")
+        localStorage.setItem("select", "English");          // Button to go to language select
+        localStorage.setItem("back", "Back");               // Back button
+        localStorage.setItem("confirm", "Confirm");
+        localStorage.setItem("cancel", "Cancel"); 
+
+        // login.html
+        localStorage.setItem("newAccount", "New Account");  // New Account Button
+        localStorage.setItem("login", "Login");             
+        localStorage.setItem("lusername", "Username");       
+        localStorage.setItem("lpassword", "Password");      
+
+        // createAccount.html
+        localStorage.setItem("username", "Username:");
+        localStorage.setItem("password", "Password:");
+        localStorage.setItem("fullname", "Full Name:"); 
+        localStorage.setItem("address", "Address:");
+        localStorage.setItem("email", "Email:");
+        localStorage.setItem("phone", "Phone #:");
+        localStorage.setItem("create", "Create Account");
+        
+        // dashboard.html
+        localStorage.setItem("dashboardTitle", "Dashboard");
+        localStorage.setItem("upcoming", "Upcoming Bills");
+        localStorage.setItem("bill", "Bill");                      // Reuse in spending.html
+        localStorage.setItem("date", "Date");                      // Reuse in spending.html
+        localStorage.setItem("amountd", "Amount");                 // Reuse in spending.html
+        localStorage.setItem("paymentd", "Payment and Billing");
+        localStorage.setItem("spendingd", "Spending History");
+
+        // history.html
+        localStorage.setItem("spendingTitle", "Spending History");
+        localStorage.setItem("sortBill", "Sort By Bill");
+        localStorage.setItem("sortAmount", "Sort By Amount");
+        localStorage.setItem("sortDate", "Sort By Date");
+        
+        // bills.html
+        localStorage.setItem("billsTitle", "Bills & Payments");
+        localStorage.setItem("utilities", "Utilities");
+        localStorage.setItem("entertainment", "Entertainment");
+        localStorage.setItem("medical", "Medical");
+        localStorage.setItem("allBills", "All Bills");
+
+        // utilities.html
+        localStorage.setItem("utilitiesTitle", "Utilities");
+        localStorage.setItem("amountu", "Amount: ");
+        localStorage.setItem("due", "Due Date: ");
+        localStorage.setItem("pay", "Pay");
+        localStorage.setItem("createNewBill", "Create New Bill");
+
+        // addBill.html
+        localStorage.setItem("addBillTitle", "Billing Information");
+        localStorage.setItem("service", "Service Provider Name:");
+        localStorage.setItem("accountNum", "Account Number:");
+        localStorage.setItem("dayOfThePayment", "Day Of The Payment:");
+        localStorage.setItem("paymentMethod", "Payment Method:");
+        localStorage.setItem("addCard", "+ Add New Card");
+        localStorage.setItem("fixedCard", "Visa Debit Card ending in ****1234");
+
+        // confirmPayment.html
+        localStorage.setItem("confirmTitle", "Confirm Payment");
+        localStorage.setItem("confirmPay", "Pay $79.00 for wiFi?");
+        localStorage.setItem("confirmMethod", "Visa Debit ending in ****1234");
+        localStorage.setItem("confirmDate", "Date to Pay: 12/01/2021");
+
+        previousPage();
+    }
+
+
+    // Spanish
+    function swapSpanish() {
+        localStorage.setItem("lang", "spanish"); 
+        localStorage.setItem("select", "Español");              // "Spanish" - Button to go to language select
+        localStorage.setItem("back", "Espalda");                // "Back" - Back button
+        localStorage.setItem("confirm", "Confirmar");           // "Confirm"
+        localStorage.setItem("cancel", "Cancelar");             // "Cancel"
+
+        // login.html
+        localStorage.setItem("newAccount", "Nueva Cuenta");     // "New Account"
+        localStorage.setItem("login", "Acceso");                // "Login"
+        localStorage.setItem("lusername", "Nombre de usuario"); // "Username" 
+        localStorage.setItem("lpassword", "Contraseña");        // "Password"
+
+        // createAccount.html
+        localStorage.setItem("username", "Nombre de usuario:");      // "Username:"
+        localStorage.setItem("password", "Contraseña:");             // "Password:"
+        localStorage.setItem("fullname", "Nombre Completo:");        // "Full Name:"
+        localStorage.setItem("address", "Dirección:");               // "Address:"
+        localStorage.setItem("email", "Correo electrónico:");        // "Email:"
+        localStorage.setItem("phone", "Teléfono:");                  // "Phone #:"
+        localStorage.setItem("create", "Crear una Cuenta");          // "Create Account"
+        
+        // dashboard.html
+        localStorage.setItem("dashboardTitle", "Tablero");        // "Dashboard"
+        localStorage.setItem("upcoming", "Próximas Facturas");    // "Upcoming Bills"
+        localStorage.setItem("bill", "Factura");                  // "Bill"   - Reuse in spending.html
+        localStorage.setItem("date", "Fecha");                    // "Date"   - Reuse in spending.html
+        localStorage.setItem("amountd", "Monto");                 // "Amount" - Reuse in spending.html
+        localStorage.setItem("paymentd", "Pago y Facturación");   // "Payment and Billing"
+        localStorage.setItem("spendingd", "Historial de Gastos"); // "Spending History"
+
+        // history.html
+        localStorage.setItem("spendingTitle", "Historial de Gastos");  // "Spending History"
+        localStorage.setItem("sortBill", "Ordenar por Factura");       // "Sort By Bill"
+        localStorage.setItem("sortAmount", "Ordenar por cantidad");    // "Sort By Amount"
+        localStorage.setItem("sortDate", "Ordenar por fecha");         // "Sort By Date"
+        
+        // bills.html
+        localStorage.setItem("billsTitle", "Facturas y pagos");    // "Bills & Payments"
+        localStorage.setItem("utilities", "Utilidades");           // "Utilities"
+        localStorage.setItem("entertainment", "Entretenimiento");  // "Entertainment"
+        localStorage.setItem("medical", "Médico");                 // "Medical"
+        localStorage.setItem("allBills", "Todas las Facturas");    // "All Bills"
+
+        // utilities.html
+        localStorage.setItem("utilitiesTitle", "Utilidades");           // "Utilities"
+        localStorage.setItem("amountu", "Monto: ");                     // "Amount: "
+        localStorage.setItem("due", "Fecha de Vencimiento: ");          // "Due Date: "
+        localStorage.setItem("pay", "Pagar");                           // "Pay"
+        localStorage.setItem("createNewBill", "Crear Nueva Factura");   // "Create New Bill"
+
+        // addBill.html
+        localStorage.setItem("addBillTitle", "Información de Facturación");                    // "Billing Information"
+        localStorage.setItem("service", "Nombre del Proveedor de Servicios:");                 // "Service Provider Name:"
+        localStorage.setItem("accountNum", "Número de Cuenta:");                               // "Account Number:"
+        localStorage.setItem("dayOfThePayment", "Día del Pago:");                              // "Day Of The Payment:"
+        localStorage.setItem("paymentMethod", "Método de Pago:");                              // "Payment Method:"
+        localStorage.setItem("addCard", "+ Agregar Nueva Tarjeta");                            // "+ Add New Card"
+        localStorage.setItem("fixedCard", "Tarjeta de débito Visa terminada en **** 1234");    // "Visa Debit Card ending in ****1234"
+
+        // confirmPayment.html
+        localStorage.setItem("confirmTitle", "Confirmar Pago");                        // "Confirm Payment"
+        localStorage.setItem("confirmPay", "¿Pagar $ 79.00 por wifi?");                // "Pay $79.00 for wiFi?"
+        localStorage.setItem("confirmMethod", "Débito Visa que termina en **** 1234"); // "Visa Debit ending in ****1234"
+        localStorage.setItem("confirmDate", "Fecha para pagar: 12/01/2021");           // "Date to Pay: 12/01/2021"
+        
+        previousPage();
+    }
+
+    // Thai
+    function swapThai() {
+        localStorage.setItem("lang", "thai");
+        localStorage.setItem("select", "ไทย");              // "Thai" - Button to go to language select
+        localStorage.setItem("back", "กลับ");                // "Back" - Back button
+        localStorage.setItem("confirm", "ยืนยัน");            // "Confirm"
+        localStorage.setItem("cancel", "ยกเลิก");            // "Cancel"
+
+        // login.html
+        localStorage.setItem("newAccount", "บัญชีใหม่");   // "New Account"
+        localStorage.setItem("login", "เข้าสู่ระบบ");       // "Login"
+        localStorage.setItem("lusername", "ชื่อผู้ใช้");     // "Username" 
+        localStorage.setItem("lpassword", "รหัสผ่าน");    // "Password"
+
+        // createAccount.html
+        localStorage.setItem("username", "ชื่อผู้ใช้:");     // "Username:"
+        localStorage.setItem("password", "รหัสผ่าน:");    // "Password:"
+        localStorage.setItem("fullname", "ชื่อเต็ม:");     // "Full Name:"
+        localStorage.setItem("address", "ที่อยู่:");       // "Address:"
+        localStorage.setItem("email", "อีเมล:");         // "Email:"
+        localStorage.setItem("phone", "โทรศัพท์ #:");    // "Phone #:"
+        localStorage.setItem("create", "สร้างบัญชี");     // "Create Account"
+        
+        // dashboard.html
+        localStorage.setItem("dashboardTitle", "แผงควบคุม");             // "Dashboard"
+        localStorage.setItem("upcoming", "ตั๋วเงินที่จะเกิดขึ้น");               // "Upcoming Bills"
+        localStorage.setItem("bill", "ใบแจ้งหนี้");                        // "Bill"   - Reuse in spending.html
+        localStorage.setItem("date", "วันที่");                            // "Date"   - Reuse in spending.html
+        localStorage.setItem("amountd", "จำนวน");                       // "Amount" - Reuse in spending.html
+        localStorage.setItem("paymentd", "การชำระเงินและการเรียกเก็บเงิน");   // "Payment and Billing"
+        localStorage.setItem("spendingd", "ประวัติการใช้จ่าย");             // "Spending History"
+
+        // history.html
+        localStorage.setItem("spendingTitle", "ประวัติการใช้จ่าย");   // "Spending History"
+        localStorage.setItem("sortBill", "เรียงตามบิล");            // "Sort By Bill"
+        localStorage.setItem("sortAmount", "เรียงตามจำนวน");       // "Sort By Amount"
+        localStorage.setItem("sortDate", "เรียงตามวันที่");          // "Sort By Date"
+        
+        // bills.html
+        localStorage.setItem("billsTitle", "บิล & การชำระเงิน");     // "Bills & Payments"
+        localStorage.setItem("utilities", "สาธารณูปโภค");          // "Utilities"
+        localStorage.setItem("entertainment", "ความบันเทิง");       // "Entertainment"
+        localStorage.setItem("medical", "ทางการแพทย์");           // "Medical"
+        localStorage.setItem("allBills", "ตั๋วเงินทั้งหมด");          // "All Bills"
+
+        // utilities.html
+        localStorage.setItem("utilitiesTitle", "สาธารณูปโภค");        // "Utilities"
+        localStorage.setItem("amountu", "จำนวน: ");                  // "Amount: "
+        localStorage.setItem("due", "วันครบกำหนด: ");                 // "Due Date: "
+        localStorage.setItem("pay", "จ่าย");                          // "Pay"
+        localStorage.setItem("createNewBill", "สร้างบิลใหม่");          // "Create New Bill"
+
+        // addBill.html
+        localStorage.setItem("addBillTitle", "ข้อมูลการเรียกเก็บเงิน");                // "Billing Information"
+        localStorage.setItem("service", "ชื่อผู้ให้บริการ:");                          // "Service Provider Name:"
+        localStorage.setItem("accountNum", "หมายเลขบัญชี:");                      // "Account Number:"
+        localStorage.setItem("dayOfThePayment", "วันที่ชำระเงิน:");                  // "Day Of The Payment:"
+        localStorage.setItem("paymentMethod", "วิธีการชำระเงิน:");                   // "Payment Method:"
+        localStorage.setItem("addCard", "+ เพิ่มการ์ดใหม่");                         // "+ Add New Card"
+        localStorage.setItem("fixedCard", "บัตรวีซ่า เดบิต ลงท้ายด้วย ****1234");     // "Visa Debit Card ending in ****1234"
+
+        // confirmPayment.html
+        localStorage.setItem("confirmTitle", "ยืนยันการชำระเงิน");                     // "Confirm Payment"
+        localStorage.setItem("confirmPay", "จ่าย $ 79.00 สำหรับ wifi?");             // "Pay $79.00 for wiFi?"
+        localStorage.setItem("confirmMethod", "Visa Debit ลงท้ายด้วย ****1234");     // "Visa Debit ending in ****1234"
+        localStorage.setItem("confirmDate", "วันที่ชำระเงิน: 12/01/2021");              // "Date to Pay: 12/01/2021"
+    
+        previousPage();
+    }
+
+
+    function swapRussian() {
+        localStorage.setItem("lang", "russian");
+        localStorage.setItem("select", "русский");          // "Russian" - Button to go to language select
+        localStorage.setItem("back", "Назад");              // "Back" - Back button
+        localStorage.setItem("confirm", "Подтверждать");    // "Confirm"
+        localStorage.setItem("cancel", "Отмена");           // "Cancel"
+
+        // login.html
+        localStorage.setItem("newAccount", "Новый аккаунт");      // "New Account"
+        localStorage.setItem("login", "Авторизоваться");          // "Login"
+        localStorage.setItem("lusername", "Имя пользователя");    // "Username" 
+        localStorage.setItem("lpassword", "Пароль");              // "Password"
+
+        // createAccount.html
+        localStorage.setItem("username", "Имя пользователя:");    // "Username:"
+        localStorage.setItem("password", "Пароль:");              // "Password:"
+        localStorage.setItem("fullname", "Полное имя:");          // "Full Name:"
+        localStorage.setItem("address", "Адрес:");                // "Address:"
+        localStorage.setItem("email", "Эл. адрес:");              // "Email:"
+        localStorage.setItem("phone", "Телефон #:");              // "Phone #:"
+        localStorage.setItem("create", "Создать аккаунт");        // "Create Account"
+        
+        // dashboard.html
+        localStorage.setItem("dashboardTitle", "Щиток приборов");        // "Dashboard"
+        localStorage.setItem("upcoming", "Предстоящие счета");           // "Upcoming Bills"
+        localStorage.setItem("bill", "Билл");                            // "Bill"   - Reuse in spending.html
+        localStorage.setItem("date", "Дата");                            // "Date"   - Reuse in spending.html
+        localStorage.setItem("amountd", "Количество");                   // "Amount" - Reuse in spending.html
+        localStorage.setItem("paymentd", "Оплата и выставление счетов"); // "Payment and Billing"
+        localStorage.setItem("spendingd", "История расходов");           // "Spending History"
+
+        // history.html
+        localStorage.setItem("spendingTitle", "История расходов");      // "Spending History"
+        localStorage.setItem("sortBill", "Сортировать по счету");       // "Sort By Bill"
+        localStorage.setItem("sortAmount", "Сортировать по сумме");     // "Sort By Amount"
+        localStorage.setItem("sortDate", "Сортировать по дате");        // "Sort By Date"
+        
+        // bills.html
+        localStorage.setItem("billsTitle", "Счета и платежи");    // "Bills & Payments"
+        localStorage.setItem("utilities", "Утилиты");             // "Utilities"
+        localStorage.setItem("entertainment", "Развлечение");     // "Entertainment"
+        localStorage.setItem("medical", "Медицинское");           // "Medical"
+        localStorage.setItem("allBills", "Все счета");            // "All Bills"
+
+        // utilities.html
+        localStorage.setItem("utilitiesTitle", "Утилиты");               // "Utilities"
+        localStorage.setItem("amountu", "Количество: ");                 // "Amount: "
+        localStorage.setItem("due", "Срок оплаты: ");                    // "Due Date: "
+        localStorage.setItem("pay", "Платить");                          // "Pay"
+        localStorage.setItem("createNewBill", "Создать новый счет");     // "Create New Bill"
+
+        // addBill.html
+        localStorage.setItem("addBillTitle", "Информация для выставления счета");       // "Billing Information"
+        localStorage.setItem("service", "Имя поставщика услуг:");                       // "Service Provider Name:"
+        localStorage.setItem("accountNum", "Номер счета:");                             // "Account Number:"
+        localStorage.setItem("dayOfThePayment", "День платежа:");                       // "Day Of The Payment:"
+        localStorage.setItem("paymentMethod", "Способ оплаты:");                        // "Payment Method:"
+        localStorage.setItem("addCard", "+ Добавить новую карту");                      // "+ Add New Card"
+        localStorage.setItem("fixedCard", "Дебетовая карта Visa, номер которой заканчивается на **** 1234");    // "Visa Debit Card ending in ****1234"
+
+        // confirmPayment.html
+        localStorage.setItem("confirmTitle", "Подтвердите оплату");                       // "Confirm Payment"
+        localStorage.setItem("confirmPay", "Платить 79 долларов за Wi-Fi?");              // "Pay $79.00 for wiFi?"
+        localStorage.setItem("confirmMethod", "Visa Debit, оканчивающийся на **** 1234"); // "Visa Debit ending in ****1234"
+        localStorage.setItem("confirmDate", "Дата оплаты: 12/01/2021");                   // "Date to Pay: 12/01/2021"
+        
+        previousPage();
+    }
+
+</script>
+
+
+
 <img id="world" src="images/world.png">
 
 <ul id="languageSelect">
 
     <!-- English -->
     <li style="list-style-type:none;">
-        <a href="login.html"> 
-            <img src="images/englishFlag.png">
+        <img src="images/englishFlag.png">
 
-            <button style="font-size: 50px;">
-                English
-            </button>
-        </a>
+        <button style="font-size: 50px;" onclick="swapEnglish()">
+            English
+        </button>
     </li>
 
 
     <!-- Spanish -->
     <li style="list-style-type:none;">
-        <a href="login.html"> 
-            <img src="images/spanishFlag.png">
-            <button style="font-size: 50px;">
-                Español
-            </button>
-        </a>
+        <img src="images/spanishFlag.png">
+        <button style="font-size: 50px;" onclick="swapSpanish()">
+            Español
+        </button>
     </li>
 
 
     <!-- Thai -->
     <li style="list-style-type:none;">
-        <a href="login.html"> 
-            <img src="images/thaiFlag.png">
-            <button style="font-size: 50px;">
-                ไทย
-            </button>
-        </a>
+        <img src="images/thaiFlag.png">
+        <button style="font-size: 50px;"  onclick="swapThai()">
+            ไทย
+        </button>
     </li>
 
 
     <!-- Russian -->
     <li style="list-style-type:none;">
-        <a href="login.html"> 
-            <img src="images/russianFlag.png">
-            <button style="font-size: 50px;">
-                Pусский
-            </button>
-        </a>
+        <img src="images/russianFlag.png">
+        <button style="font-size: 50px;"  onclick="swapRussian()">
+            Pусский
+        </button>
     </li>
 
 </ul>
