@@ -58,6 +58,9 @@ label {
 }
 
 #flag {
+    height: 25px;
+}
+
+#language {
     display: inline-block;
-    height: 20px;
 }
