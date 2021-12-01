@@ -40,6 +40,14 @@ input[type=text] {
     border-radius: 12px;
 }
 
+input[type=password] {
+    font-family: 'Comfortaa';
+    margin: 20px;
+    font-size: 28px;
+    vertical-align: middle;
+    border-radius: 12px;
+}
+
 button {
     font-family: 'Comfortaa';
     padding: 10px;
