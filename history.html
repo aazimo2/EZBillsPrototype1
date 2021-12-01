@@ -30,32 +30,33 @@
               <label for="accountButton" class="headerLabel" id="accountLabel">Account</label>
           </div>
   
-          <!-- Language Selection -->
-          <a href="index.html">
-              <button id="languageButton"><img id="flag" src="images/englishFlag.png"> English</button>
-          </a>
+            <!-- Language Selection -->
+            <button id="languageButton" style="font-family: 'Comfortaa'; "onclick="swapLang()"> 
+                <img id="flag" src="images/englishFlag.png" > 
+                <p id="language">English</p> 
+            </button>
       </header>
       
       </div>
      
      
 
-        <h1>Spending History</h1>
+        <h1 id="historyTitle">Spending History</h1>
 
     <div class="container">
         <canvas id="myChart" width="100px" height="100px"></canvas>
     </div>
     <div class="container">
-        <p><button onclick="sortTableName()">Sort By Bill</button></p>
-        <p><button onclick="sortTableAmount()">Sort By Amount</button></p>
-        <p><button onclick="sortTableDate()">Sort By Date</button></p>
+        <p><button onclick="sortTableName()" id="historyBill1">Sort By Bill</button></p>
+        <p><button onclick="sortTableAmount()" id="historyAmount1">Sort By Amount</button></p>
+        <p><button onclick="sortTableDate()" id="historyDate1">Sort By Date</button></p>
       </div>
     <div class="container">
         <table id="table">
             <tr>
-              <th>Bill</th>
-              <th>Date</th>
-              <th>Amount</th>
+              <th id="historyBill2">Bill</th>
+              <th id="historyDate2">Date</th>
+              <th id="historyAmount2">Amount</th>
             </tr>
             <tr>
               <td><img src="images/water.png" style="object-fit:contain;
@@ -248,6 +249,44 @@
         ctx.canvas.parentNode.style.height = '400px';
         ctx.canvas.parentNode.style.width = '400px';
         
+    }
+
+
+
+    // Language Swap Section
+    // document.getElementById("").innerHTML = localStorage.getItem("");
+    document.getElementById("historyTitle").innerHTML = localStorage.getItem("spendingTitle");
+    document.getElementById("historyBill1").innerHTML = localStorage.getItem("sortBill");
+    document.getElementById("historyAmount1").innerHTML = localStorage.getItem("sortAmount");
+    document.getElementById("historyDate1").innerHTML = localStorage.getItem("sortDate");
+    document.getElementById("historyBill2").innerHTML = localStorage.getItem("bill");
+    document.getElementById("historyAmount2").innerHTML = localStorage.getItem("amountd");
+    document.getElementById("historyDate2").innerHTML = localStorage.getItem("date");
+    document.getElementById("language").innerHTML = localStorage.getItem("select");
+    document.getElementById("backLabel").innerHTML = localStorage.getItem("back");
+    
+    flag = localStorage.getItem("lang");
+    switch(flag) {
+        case "english":
+            document.getElementById("flag").src = "images/englishFlag.png";
+            break;
+        case "spanish":
+            document.getElementById("flag").src = "images/spanishFlag.png";
+            break;
+        case "thai":
+            document.getElementById("flag").src = "images/thaiFlag.png";
+            break;
+        case "russian":
+            document.getElementById("flag").src = "images/russianFlag.png";
+            break;
+        default:
+            document.getElementById("flag").src = "images/englishFlag.png";
+            break;
+    }
+
+    function swapLang() {
+        sessionStorage.setItem("prev", "history.html")
+        window.location.href = "index.html";
     }
 
 </script>

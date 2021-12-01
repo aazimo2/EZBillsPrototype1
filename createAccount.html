@@ -10,20 +10,21 @@
 
 <header>
     <div id="langSelect">
-        <a href="index.html">
-            <button><img src="images/englishFlag.png"> English</button>
-        </a>
+        <button id="languageButton" style="font-family: 'Comfortaa';" onclick="swapLang()"> 
+            <img id="flag" src="images/englishFlag.png"> 
+            <p id="language">English</p> 
+        </button>
     </div>
 </header>
 
 <main>
     <div class='column'>
-        <p>Username:</p>
-        <p>Password:</p>
-        <p>Full Name:</p>
-        <p>Address:</p>
-        <p>Email:</p>
-        <p>Phone #:</p>
+        <p id="usernameC">Username:</p>
+        <p id="passwordC">Password:</p>
+        <p id="fullnameC">Full Name:</p>
+        <p id="addressC">Address:</p>
+        <p id="emailC">Email:</p>
+        <p id="phoneC">Phone #:</p>
     </div>
     <div class='column'>
         <input id="username" type="text">
@@ -50,5 +51,42 @@
 </footer>
 
 </body>
+
+<script>
+    // document.getElementById("").innerHTML = localStorage.getItem("");
+    document.getElementById("usernameC").innerHTML = localStorage.getItem("username");
+    document.getElementById("passwordC").innerHTML = localStorage.getItem("password");
+    document.getElementById("fullnameC").innerHTML = localStorage.getItem("fullname");
+    document.getElementById("addressC").innerHTML = localStorage.getItem("address");
+    document.getElementById("emailC").innerHTML = localStorage.getItem("email");
+    document.getElementById("phoneC").innerHTML = localStorage.getItem("phone");
+    document.getElementById("createAccButton").innerHTML = localStorage.getItem("create");
+    document.getElementById("cancelButton").innerHTML = localStorage.getItem("cancel");
+    document.getElementById("language").innerHTML = localStorage.getItem("select");
+
+    flag = localStorage.getItem("lang");
+    switch(flag) {
+        case "english":
+            document.getElementById("flag").src = "images/englishFlag.png";
+            break;
+        case "spanish":
+            document.getElementById("flag").src = "images/spanishFlag.png";
+            break;
+        case "thai":
+            document.getElementById("flag").src = "images/thaiFlag.png";
+            break;
+        case "russian":
+            document.getElementById("flag").src = "images/russianFlag.png";
+            break;
+        default:
+            document.getElementById("flag").src = "images/englishFlag.png";
+            break;
+    }
+
+    function swapLang() {
+        sessionStorage.setItem("prev", "createAccount.html")
+        window.location.href = "index.html";
+    }
+</script>
 
 </html>

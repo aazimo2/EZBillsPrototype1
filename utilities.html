@@ -32,8 +32,10 @@
         </div>
 
         <!-- Language Selection -->
-        <button id="languageButton"><img id="flag" src="images/englishFlag.png"> English</button>
-    
+        <button id="languageButton" style="font-family: 'Comfortaa';" onclick="swapLang()"> 
+            <img id="flag" src="images/englishFlag.png"> 
+            <p id="language">English</p> 
+        </button>
     </header>
 
     <h1>Utilities</h1>
@@ -45,7 +47,7 @@
                 <td>1. Aerizon</td>
                 <td>Amount: $79.00
                     <a href="confirmPayment.html">
-                        <button class="payButton">Pay</button>
+                        <button class="payButton" id="pay1">Pay</button>
                     </a>
                 </td>
                 <td>Due Date: October 22nd, 2021</td>
@@ -54,7 +56,7 @@
             <tr>
                 <td>2. Natural Water</td>
                 <td>Amount: $20.50
-                    <button class="payButton">Pay</button>
+                    <button class="payButton" id="pay2">Pay</button>
                 </td>
                 <td>Due Date: October 24nd, 2021</td>
             </tr>
@@ -62,9 +64,9 @@
             <tr>
                 <td>3. Mister Electrik</td>
                 <td>Amount: $34.20
-                    <button class="payButton">Pay</button>
+                    <button class="payButton" id="pay3">Pay</button>
                 </td>
-                <td>Due Date: October 26nd, 2021</td>
+                <td>October 26nd, 2021</td>
             </tr>
         </table>
 
@@ -72,7 +74,51 @@
     </div>
     <div id="addBill">
         <a href="addBill.html">
-            <button><img src="images/add.png"> Create New Bill</button>
+            <button >
+                <p style="float:left"><img src="images/add.png" > </p>
+                <p id="createNewBill" >Create New Bill</p> 
+            </button>
         </a>
     </div>
+
+    <script>
+        // document.getElementById("").innerHTML = localStorage.getItem("");
+        /*
+        document.getElementById("").innerHTML = localStorage.getItem("utilitiesTitle");
+        document.getElementById("").innerHTML = localStorage.getItem("amountu");
+        document.getElementById("").innerHTML = localStorage.getItem("due");
+        */
+        document.getElementById("pay1").innerHTML = localStorage.getItem("pay");
+        document.getElementById("pay2").innerHTML = localStorage.getItem("pay");
+        document.getElementById("pay3").innerHTML = localStorage.getItem("pay");
+        document.getElementById("createNewBill").innerHTML = localStorage.getItem("createNewBill");
+        
+        document.getElementById("language").innerHTML = localStorage.getItem("select");
+        document.getElementById("backLabel").innerHTML = localStorage.getItem("back");
+    
+        flag = localStorage.getItem("lang");
+        switch(flag) {
+            case "english":
+                document.getElementById("flag").src = "images/englishFlag.png";
+                break;
+            case "spanish":
+                document.getElementById("flag").src = "images/spanishFlag.png";
+                break;
+            case "thai":
+                document.getElementById("flag").src = "images/thaiFlag.png";
+                break;
+            case "russian":
+                document.getElementById("flag").src = "images/russianFlag.png";
+                break;
+            default:
+                document.getElementById("flag").src = "images/englishFlag.png";
+                break;
+        }
+    
+        function swapLang() {
+            sessionStorage.setItem("prev", "utilities.html")
+            window.location.href = "index.html";
+        }
+    
+    </script>
 </html>

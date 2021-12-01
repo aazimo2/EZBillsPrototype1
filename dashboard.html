@@ -22,24 +22,25 @@
         </div>
 
         <!-- Language Selection -->
-        <a href="index.html">
-            <button id="languageButton"><img id="flag" src="images/englishFlag.png"> English</button>
-        </a>
+        <button id="languageButton" style="font-family: 'Comfortaa'; "onclick="swapLang()"> 
+            <img id="flag" src="images/englishFlag.png" > 
+            <p id="language">English</p> 
+        </button>
     </header>
     
     </div>
     <div class="container">
-      <h1>Dashboard</h1>
+      <h1 id="dashboardTitle">Dashboard</h1>
   </div>
    
    
     <div class="container">
         <table id="table">
-            <caption>Upcoming Bills</caption>
+            <caption id="upcomingbills">Upcoming Bills</caption>
             <tr>
-              <th>Bill</th>
-              <th>Date</th>
-              <th>Amount</th>
+              <th id="dashBill">Bill</th>
+              <th id="dashDate">Date</th>
+              <th id="dashAmount">Amount</th>
             </tr>
             <tr>
               <td><img src="images/water.png" style="object-fit:contain;
@@ -62,13 +63,13 @@
 
     <div class="container" style="margin-top: 50px;">
       <div class="icon-box">
-        <h1>Payment and Billing</h1>
+        <h1 id="dashPaymentAndBilling">Payment and Billing</h1>
           <a href="bills.html">        
             <img src="images/payment_page_icon.jpg"> 
           </a>
       </div>
       <div class="icon-box">
-        <h1>Spending History</h1>
+        <h1 id="dashSpendingHistory">Spending History</h1>
         <a href="history.html">
           <img src="images/history_icon.jpg">
         </a>
@@ -79,8 +80,43 @@
 
 </body>
 
+<script>
+      // document.getElementById("").innerHTML = localStorage.getItem("");
+    document.getElementById("dashboardTitle").innerHTML = localStorage.getItem("dashboardTitle");
+    document.getElementById("upcomingbills").innerHTML = localStorage.getItem("upcoming");
+    document.getElementById("dashBill").innerHTML = localStorage.getItem("bill");
+    document.getElementById("dashDate").innerHTML = localStorage.getItem("date");
+    document.getElementById("dashAmount").innerHTML = localStorage.getItem("amountd");
+    document.getElementById("dashPaymentAndBilling").innerHTML = localStorage.getItem("paymentd");
+    document.getElementById("dashSpendingHistory").innerHTML = localStorage.getItem("spendingd");
+    document.getElementById("language").innerHTML = localStorage.getItem("select");
+    
 
+    flag = localStorage.getItem("lang");
+    switch(flag) {
+        case "english":
+            document.getElementById("flag").src = "images/englishFlag.png";
+            break;
+        case "spanish":
+            document.getElementById("flag").src = "images/spanishFlag.png";
+            break;
+        case "thai":
+            document.getElementById("flag").src = "images/thaiFlag.png";
+            break;
+        case "russian":
+            document.getElementById("flag").src = "images/russianFlag.png";
+            break;
+        default:
+            document.getElementById("flag").src = "images/englishFlag.png";
+            break;
+    }
+
+    function swapLang() {
+        sessionStorage.setItem("prev", "dashboard.html")
+        window.location.href = "index.html";
+    }
 </script>
+
 
 
 
