@@ -240,9 +240,11 @@
 			options: {
                 
 				scales: {
-					y: {
-						beginAtZero: false
-					}
+					yAxes: [{
+                        ticks: {
+						    beginAtZero: true
+                        }
+					}]
 				}
 			}
 		});
