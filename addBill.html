@@ -73,7 +73,8 @@
     </div>
     <div id="addBillConfirm">
         <a href="utilities.html" style="float:right;"> 
-            <button style="font-family: 'Comfortaa';" id="confirm"> Confirm </button>
+
+            <button style="font-family: 'Comfortaa';" id="confirm" onclick="saveBill()"> Confirm </button>
         </a>
     </div>
 </footer>
@@ -81,6 +82,17 @@
 </body>
 
 <script>
+
+    function saveBill(){
+        var sp = document.getElementById("serviceProvider").value;
+        var accNum = document.getElementById("accountNumber").value
+        var date = document.getElementById("dayToPay").value
+        console.log(sp,accNum,date)
+        localStorage.setItem("serviceProvider",sp);
+        localStorage.setItem("accNum",accNum)
+        localStorage.setItem("date",date)
+        localStorage.setItem("addBill",1)
+    }
     // document.getElementById("").innerHTML = localStorage.getItem("");
     document.getElementById("addBillTitle").innerHTML = localStorage.getItem("addBillTitle");
     document.getElementById("backLabel").innerHTML = localStorage.getItem("back");
