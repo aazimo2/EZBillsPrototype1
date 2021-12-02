@@ -19,7 +19,6 @@ label {
     vertical-align: middle;
 }
 
-
 #utilitiesBox, #entertainmentBox {
     padding-bottom: 30%;
 }
@@ -45,4 +44,8 @@ label {
 
 #allBillsButton {
     background-image: url("../images/allBills.png");
+}
+
+#utilitiesLabel {
+    cursor: pointer;
 }
