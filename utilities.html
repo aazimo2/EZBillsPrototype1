@@ -92,6 +92,7 @@
         var sp = localStorage.getItem("serviceProvider");
         var accNum = localStorage.getItem("accNum")
         var dueDate = localStorage.getItem("Duedate")
+        var total = localStorage.getItem("ammountTotal")
         console.log(dueDate,sp,accNum)
         if(addBill == 1){
             var table = document.getElementById("utilitiesTable")
@@ -100,7 +101,7 @@
             var cell2 = row.insertCell(1);
             var cell3 = row.insertCell(2);
             cell1.innerHTML = sp;
-            cell2.innerHTML = "Amount $12.20";
+            cell2.innerHTML = "Amount: $" + total;
             var btn = document.createElement('button')
             btn.type = 'button'
             btn.className = "payButton"
@@ -108,6 +109,8 @@
             cell2.appendChild(btn)
             cell3.innerHTML = "Due Date: " + dueDate
         }
+
+        $("payButton")
         
         document.getElementById("pay1").innerHTML = localStorage.getItem("pay");
         document.getElementById("pay2").innerHTML = localStorage.getItem("pay");

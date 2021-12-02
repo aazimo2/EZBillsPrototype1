@@ -53,6 +53,8 @@
 
     <label style="padding-left: 26px;" id="dayOfThePayment">Day Of The Payment:</label>
     <input type="text" id="dayToPay" > <br> <br>
+    <label style="padding-left: 178px;" id="dayOfThePayment">Amount:</label>
+    <input type="text" id="ammount" > <br> <br>
 
     <div style="padding-bottom: 20px; padding-right: 40px;">
         <label id="paymentMethod">Payment Method:</label> 
@@ -87,7 +89,9 @@
         var sp = document.getElementById("serviceProvider").value;
         var accNum = document.getElementById("accountNumber").value
         var dueDate = document.getElementById("dayToPay").value
+        var ammount = document.getElementById("ammount").value
         console.log(sp,accNum,dueDate)
+        localStorage.setItem("ammountTotal",ammount)
         localStorage.setItem("serviceProvider",sp);
         localStorage.setItem("accNum",accNum)
         localStorage.setItem("Duedate",dueDate)
