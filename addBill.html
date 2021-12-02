@@ -86,11 +86,11 @@
     function saveBill(){
         var sp = document.getElementById("serviceProvider").value;
         var accNum = document.getElementById("accountNumber").value
-        var date = document.getElementById("dayToPay").value
-        console.log(sp,accNum,date)
+        var dueDate = document.getElementById("dayToPay").value
+        console.log(sp,accNum,dueDate)
         localStorage.setItem("serviceProvider",sp);
         localStorage.setItem("accNum",accNum)
-        localStorage.setItem("date",date)
+        localStorage.setItem("Duedate",dueDate)
         localStorage.setItem("addBill",1)
     }
     // document.getElementById("").innerHTML = localStorage.getItem("");

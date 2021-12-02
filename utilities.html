@@ -89,11 +89,10 @@
         document.getElementById("").innerHTML = localStorage.getItem("due");
         */
         var addBill = localStorage.getItem("addBill")
-        var sp = localStorage.getItem("serviceProvider",sp);
-        var accNum = localStorage.getItem("accNum",accNum)
-        var date = localStorage.getItem("date",date)
-        console.log(addBill,sp,accNum,date);
-
+        var sp = localStorage.getItem("serviceProvider");
+        var accNum = localStorage.getItem("accNum")
+        var dueDate = localStorage.getItem("Duedate")
+        console.log(dueDate,sp,accNum)
         if(addBill == 1){
             var table = document.getElementById("utilitiesTable")
             var row = table.insertRow(0);
@@ -107,7 +106,7 @@
             btn.className = "payButton"
             btn.innerHTML = "Pay"
             cell2.appendChild(btn)
-            cell3.innerHTML = "Due Date: " + date
+            cell3.innerHTML = "Due Date: " + dueDate
         }
         document.getElementById("pay1").innerHTML = localStorage.getItem("pay");
         document.getElementById("pay2").innerHTML = localStorage.getItem("pay");
