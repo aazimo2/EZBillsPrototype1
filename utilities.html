@@ -107,7 +107,24 @@
             btn.className = "payButton"
             btn.innerHTML = "Pay"
             cell2.appendChild(btn)
+            
             cell3.innerHTML = "Due Date: " + dueDate
+            btn.onclick = function () {
+                var rowId = event.target.parentNode.parentNode.id;
+                //console.log(rowId)
+                var table = document.getElementById("utilitiesTable")
+                var row = table.rows[rowId]
+                var a = row.getElementsByTagName("td")[0].innerHTML
+                var b = row.getElementsByTagName("td")[1].innerText
+                var c = row.getElementsByTagName("td")[2].innerHTML
+                b = b.slice(8)
+                c = c.slice(10)
+                b = b.substr(0,b.indexOf('Pay'))
+                localStorage.setItem("PayProviderName",a)
+                localStorage.setItem("PayTotal",b)
+                localStorage.setItem("PayDate",c)
+                location.href = 'confirmPayment.html'
+            }
         }
 
         function saveData(){
