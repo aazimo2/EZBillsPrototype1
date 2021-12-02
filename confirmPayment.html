@@ -46,10 +46,10 @@
     </h1>
 
 
-    <h2 style="font-size: 100px; text-align: center;">Aerizon</h2>
-    <p style="font-size: 50px; text-align: center;" id="confirmPay">Pay $79.00 for WiFi?</p>
+    <h2 style="font-size: 100px; text-align: center;" id="serviceProvider"></h2>
+    <p style="font-size: 50px; text-align: center;" id="confirmPay"></p>
     <p style="font-size: 50px; text-align: center;" id="confirmMethod">Visa Debit ending in ****1234</p>
-    <p style="font-size: 50px; text-align: center;" id="confirmDate"> Date to Pay: 12/01/2021</p>
+    <p style="font-size: 50px; text-align: center;" id="confirmDate"> </p>
 
 </main>
 
@@ -72,6 +72,12 @@
 </body>
 
 <script>
+
+
+    var provider = document.getElementById("serviceProvider")
+    var text = document.createTextNode(localStorage.getItem("PayProviderName"))
+    provider.appendChild(text)
+
     document.getElementById("confirmTitle").innerHTML = localStorage.getItem("confirmTitle");
     document.getElementById("backLabel").innerHTML = localStorage.getItem("back");
     document.getElementById("cancel").innerHTML = localStorage.getItem("cancel");
